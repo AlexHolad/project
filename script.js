@@ -1,21 +1,22 @@
 "use strict";
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+let num = 50;
 
-const personalMouvieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false 
-};
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
 
-const a = prompt('Один из последних просмотренных фильмов?',''),
-      b = prompt('На сколько оцените его?',''),
-      c = prompt('Один из последних просмотренных фильмов?',''),
-      d = prompt('На сколько оцените его?','');
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <= 55);
 
-personalMouvieDB.movies[a] = b;
-personalMouvieDB.movies[c] = d;
-
-console.log(personalMouvieDB);
+for (let i = 1; i < 8; i++) {
+    if (i === 6){
+        // break;
+        continue;
+    }
+    console.log(i);
+}
