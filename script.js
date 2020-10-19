@@ -1,44 +1,36 @@
 "use strict";
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colours: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function () {
-        console.log('Test');
-    }
-};
+const arr = [1, 10, 8, 4, 5];
+arr.sort(compareNum);
+console.log(arr);
 
-options.makeTest ();
+function compareNum (a, b) {
+    return a - b;
+}
+// arr[99] = 0;
+// console.log(arr.length); // кол-во элементов массива + 1
+// console.log(arr);
 
-// const {border, bg} = options.colours;
-// console.log(border);
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`)
+}); 
+
+//arr.pop();  // - удаляет последний элемент массива
 
 
-// console.log(Object.keys(options).length); // Показывает количество свойств в объекте
+// arr.push(10); // - добавляет в конец массива 10
+// console.log(arr);
 
-// console.log(options.name); - показывает значение свойства
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
 
-// delete options.name; - удаляет свойство в объекте
+for (let value of arr) {
+    console.log(value);
+}
 
-// console.log(options['colours']['border']); // выводит свойство вложенного объекта
 
-// let counter = 0;
-// for (let key in options) {
-//     if (typeof(options[key]) === 'object') {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`); 
-//             counter++;
-//         }
-//     } else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//         counter++;
-//     }
-    
-// }
-
-// console.log(counter);
+const str = prompt("", "");  // - вписать свойство в строку
+const products = str.split(", "); // - строку разбить в массив
+products.sort(); // - отсортировать в алфавитном порядке как строки
+console.log(products.join(';')); // - объединить в строку
